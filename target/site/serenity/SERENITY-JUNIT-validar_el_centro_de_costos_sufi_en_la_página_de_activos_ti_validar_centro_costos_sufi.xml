@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="validar el centro de costos SUFI en la página de activos TI" skipped="0" tests="1" time="13.93" timestamp="2019-08-15 04:27:41"><testcase name="validar centro costos SUFI"><failure message="  Código Nombre Cuenta Tipo Cuenta&#10;Seleccionar 3006 Centro de costo Prueba 987654321 - Todos -&#10;Seleccionar 5324534534534 dsd jghjt567567ghjghj - Todos -&#10;Seleccionar 170006 carlosarturo@gmail.com sedewr - Todos -&#10;Seleccionar 1992 ejemplo ivan sdvssdfsd - Todos -&#10;Seleccionar 1300 GIAAA DE OPERACIONES 73202505 COSTO&#10;Seleccionar 13016 BANCOLOMBIA2 732025050002 COSTO&#10;Seleccionar 130210 COMCEL10 7320250510 COSTO&#10;Seleccionar 1303 LEASING BANCOLOMBIA 73202505 COSTO&#10;Seleccionar 1304 SUFI 73202505 COSTO&#10;Seleccionar 1305 FACTORING 73202505 COSTO&#10;1 2 3 4 5 6 7 8 9 10" type="java.lang.AssertionError">  Código Nombre Cuenta Tipo Cuenta
+Seleccionar 3006 Centro de costo Prueba 987654321 - Todos -
+Seleccionar 5324534534534 dsd jghjt567567ghjghj - Todos -
+Seleccionar 170006 carlosarturo@gmail.com sedewr - Todos -
+Seleccionar 1992 ejemplo ivan sdvssdfsd - Todos -
+Seleccionar 1300 GIAAA DE OPERACIONES 73202505 COSTO
+Seleccionar 13016 BANCOLOMBIA2 732025050002 COSTO
+Seleccionar 130210 COMCEL10 7320250510 COSTO
+Seleccionar 1303 LEASING BANCOLOMBIA 73202505 COSTO
+Seleccionar 1304 SUFI 73202505 COSTO
+Seleccionar 1305 FACTORING 73202505 COSTO
+1 2 3 4 5 6 7 8 9 10</failure><system-err>  Código Nombre Cuenta Tipo Cuenta
+Seleccionar 3006 Centro de costo Prueba 987654321 - Todos -
+Seleccionar 5324534534534 dsd jghjt567567ghjghj - Todos -
+Seleccionar 170006 carlosarturo@gmail.com sedewr - Todos -
+Seleccionar 1992 ejemplo ivan sdvssdfsd - Todos -
+Seleccionar 1300 GIAAA DE OPERACIONES 73202505 COSTO
+Seleccionar 13016 BANCOLOMBIA2 732025050002 COSTO
+Seleccionar 130210 COMCEL10 7320250510 COSTO
+Seleccionar 1303 LEASING BANCOLOMBIA 73202505 COSTO
+Seleccionar 1304 SUFI 73202505 COSTO
+Seleccionar 1305 FACTORING 73202505 COSTO
+1 2 3 4 5 6 7 8 9 10&#13;
+com.pom.base.steps.ActivosStep.validarCentroCostos(ActivosStep.java:36)&#13;
+com.pom.base.definition.ActivosDefinition.validoCentroDeCostosSUFI(ActivosDefinition.java:27)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase></testsuite>

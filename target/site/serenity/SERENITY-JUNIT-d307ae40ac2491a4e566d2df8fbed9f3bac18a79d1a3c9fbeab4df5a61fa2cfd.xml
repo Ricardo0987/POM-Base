@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="validar el centro de costos SUFI en la página de activos TI" skipped="0" tests="1" time="49.4" timestamp="2019-08-15 03:58:14"><testcase name="validar centro costos SUFI"><error message="Could not instantiate new WebDriver instance of type class org.openqa.selenium.firefox.FirefoxDriver (Timed out waiting 45 seconds for Firefox to start.&#10;Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'&#10;System info: host: 'CHMEPPF0V111M', ip: '172.17.27.158', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'&#10;Driver info: driver.version: FirefoxDriver" type="net.thucydides.core.webdriver.UnsupportedDriverException">Could not instantiate new WebDriver instance of type class org.openqa.selenium.firefox.FirefoxDriver (Timed out waiting 45 seconds for Firefox to start.
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'CHMEPPF0V111M', ip: '172.17.27.158', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: driver.version: FirefoxDriver</error><system-err>Could not instantiate new WebDriver instance of type class org.openqa.selenium.firefox.FirefoxDriver (Timed out waiting 45 seconds for Firefox to start.
+Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
+System info: host: 'CHMEPPF0V111M', ip: '172.17.27.158', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_211'
+Driver info: driver.version: FirefoxDriver&#13;
+com.pom.base.steps.ActivosStep.abrirPagina(ActivosStep.java:13)&#13;
+com.pom.base.definition.ActivosDefinition.estoyLogueadoEnACTIVOSTI(ActivosDefinition.java:16)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase></testsuite>

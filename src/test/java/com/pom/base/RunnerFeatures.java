@@ -7,12 +7,10 @@ import cucumber.api.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
-//@CucumberOptions(features ="src/test/resources/features/")
 @CucumberOptions(
-        features ="src/test/resources/features/operacionesBasicas.feature/",
+        features ="src/test/resources/features/activos.feature",
         snippets = SnippetType.CAMELCASE
 )
-//@CucumberOptions(features ="src/test/resources/features/ColorLib/nombre.feature")
 public class RunnerFeatures {
 
 }
