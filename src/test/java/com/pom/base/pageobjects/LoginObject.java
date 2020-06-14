@@ -5,7 +5,7 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 
-@DefaultUrl("http://testing.choucairtesting.com/ModuloContableErrores/Login.aspx")
+@DefaultUrl("http://sahitest.com/demo")
 public class LoginObject extends PageObject {
 
     @FindBy(id = "MainContent_LoginUser_UserName")
