@@ -3,6 +3,8 @@ package com.pom.base.steps;
 import com.pom.base.pageobjects.*;
 import net.serenitybdd.core.pages.PageObject;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -35,12 +37,8 @@ public class SahiTestStep extends PageObject {
         getDriver().switchTo().window(browserTabs.get(1));
     }
 
-    public void validarAperturaVentana() {
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+    public void validarAperturaVentana() throws InterruptedException {
+        Thread.sleep(2000);
         assertTrue(getDriver().getCurrentUrl().contains("/demo/framesTest.htm"));
     }
 
@@ -96,9 +94,18 @@ public class SahiTestStep extends PageObject {
         jsPopUpObject.open();
     }
 
-    public void navegarOpciones() {
+    public void navegarOpciones() throws AWTException, InterruptedException {
+        jsPopUpObject.getBtnAllPopUp().click();
+        Robot r = new Robot();
+        for (int i = 0; i < 4; ++i) {
+            r.keyPress(KeyEvent.VK_ESCAPE);
+            r.keyRelease(KeyEvent.VK_ESCAPE);
+            Thread.sleep(1000);
+        }
+        jsPopUpObject.getBtnGoBack().click();
     }
 
     public void validarPaginaPrincipal() {
+        assertThat(homeObject.getTextHome().getText(), containsText("Sahi Tests"));
     }
 }

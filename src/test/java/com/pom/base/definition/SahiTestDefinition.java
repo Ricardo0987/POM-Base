@@ -7,6 +7,8 @@ import cucumber.api.java.es.Entonces;
 import cucumber.api.java.es.Y;
 import net.thucydides.core.annotations.Steps;
 
+import java.awt.*;
+
 public class SahiTestDefinition {
 
     @Steps
@@ -29,7 +31,7 @@ public class SahiTestDefinition {
     }
 
     @Entonces("^verifico la apertura correcta de la ventana$")
-    public void verificoLaAperturaCorrectaDeLaVentana() {
+    public void verificoLaAperturaCorrectaDeLaVentana() throws InterruptedException {
         sahiTestStep.validarAperturaVentana();
     }
 
@@ -82,7 +84,7 @@ public class SahiTestDefinition {
     }
 
     @Cuando("^navego entre las opciones$")
-    public void navegoEntreLasOpciones() {
+    public void navegoEntreLasOpciones() throws InterruptedException, AWTException {
         sahiTestStep.navegarOpciones();
 
     }

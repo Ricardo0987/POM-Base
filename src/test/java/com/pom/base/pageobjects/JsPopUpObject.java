@@ -8,24 +8,18 @@ import net.thucydides.core.annotations.DefaultUrl;
 @DefaultUrl("http://sahitest.com/demo/jsPopup.htm")
 public class JsPopUpObject extends PageObject {
 
-    @FindBy(xpath = "//input[@name='user']")
-    private WebElementFacade textBoxUsername;
+    @FindBy(xpath = "//button[contains(text(),'All popup this page')]")
+    private WebElementFacade btnAllPopUp;
 
-    @FindBy(xpath = "//input[@name='password']")
-    private WebElementFacade textBoxPassword;
+    @FindBy(xpath = "//a[contains(text(),'Back')]")
+    private WebElementFacade btnGoBack;
 
-    @FindBy(xpath = "//input[@class='button']")
-    private WebElementFacade buttonLogin;
 
-    public WebElementFacade getTextBoxUsername() {
-        return textBoxUsername;
+    public WebElementFacade getBtnAllPopUp() {
+        return btnAllPopUp;
     }
 
-    public WebElementFacade getTextBoxPassword() {
-        return textBoxPassword;
-    }
-
-    public WebElementFacade getButtonLogin() {
-        return buttonLogin;
+    public WebElementFacade getBtnGoBack() {
+        return btnGoBack;
     }
 }
