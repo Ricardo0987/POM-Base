@@ -46,15 +46,18 @@ public class SahiTestDefinition {
 
     @Dado("^que estoy en la pagina de login$")
     public void queEstoyEnLaPaginaDeLogin() {
-        
+        sahiTestStep.abrirPaginaLogin();
     }
 
     @Cuando("^ingreso credenciales$")
     public void ingresoCredenciales() {
-        
+        sahiTestStep.ingresoCredenciales();
+
     }
 
     @Entonces("^verifico ingreso correcto$")
     public void verificoIngresoCorrecto() {
+        sahiTestStep.verificoLoginCorrecto();
+
     }
 }

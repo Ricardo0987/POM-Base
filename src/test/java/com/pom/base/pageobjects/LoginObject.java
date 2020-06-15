@@ -5,17 +5,20 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 
-@DefaultUrl("http://sahitest.com/demo")
+@DefaultUrl("http://sahitest.com/demo/training/login.htm")
 public class LoginObject extends PageObject {
 
-    @FindBy(id = "MainContent_LoginUser_UserName")
+    @FindBy(xpath = "//input[@name='user']")
     private WebElementFacade textBoxUsername;
 
-    @FindBy(id = "MainContent_LoginUser_Password")
+    @FindBy(xpath = "//input[@name='password']")
     private WebElementFacade textBoxPassword;
 
-    @FindBy(id = "MainContent_LoginUser_LoginButton")
+    @FindBy(xpath = "//input[@class='button']")
     private WebElementFacade buttonLogin;
+
+    @FindBy(xpath = "//h2[contains(text(),'All available books')]")
+    private WebElementFacade textWelcome;
 
     public WebElementFacade getTextBoxUsername() {
         return textBoxUsername;
@@ -27,5 +30,9 @@ public class LoginObject extends PageObject {
 
     public WebElementFacade getButtonLogin() {
         return buttonLogin;
+    }
+
+    public WebElementFacade getTextWelcome() {
+        return textWelcome;
     }
 }

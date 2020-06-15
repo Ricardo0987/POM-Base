@@ -2,6 +2,7 @@ package com.pom.base.steps;
 
 import com.pom.base.pageobjects.HomeObject;
 import com.pom.base.pageobjects.IframesTestObject;
+import com.pom.base.pageobjects.LoginObject;
 import net.serenitybdd.core.pages.PageObject;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ public class SahiTestStep extends PageObject {
 
     private HomeObject homeObject;
     private IframesTestObject iframesTestObject;
+    private LoginObject loginObject;
 
 
     public void abrirPaginaPrincipal() {
@@ -58,5 +60,19 @@ public class SahiTestStep extends PageObject {
         }
         assertThat(iframesTestObject.getTitleNotFound().getText(), containsText("Not Found"));
 
+    }
+
+    public void abrirPaginaLogin() {
+        loginObject.open();
+    }
+
+    public void ingresoCredenciales() {
+        loginObject.getTextBoxUsername().sendKeys("test");
+        loginObject.getTextBoxPassword().sendKeys("secret");
+        loginObject.getButtonLogin().click();
+    }
+
+    public void verificoLoginCorrecto() {
+        shouldBeVisible(loginObject.getTextWelcome());
     }
 }
