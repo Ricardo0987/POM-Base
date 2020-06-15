@@ -8,7 +8,7 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features ="src/test/resources/features/prueba_fase_1.feature",
+        features ="src/test/resources/features/sahi_test.feature",
         snippets = SnippetType.CAMELCASE
 )
 public class RunnerFeatures {
