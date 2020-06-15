@@ -2,12 +2,11 @@ package com.pom.base.steps;
 
 import com.pom.base.pageobjects.HomeObject;
 import com.pom.base.pageobjects.IframesTestObject;
-import io.vavr.collection.List;
 import net.serenitybdd.core.pages.PageObject;
 
 import java.util.ArrayList;
 
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.junit.Assert.assertTrue;
 
 
@@ -43,5 +42,21 @@ public class SahiTestStep extends PageObject {
             e.printStackTrace();
         }
         assertTrue(getDriver().getCurrentUrl().contains("/demo/framesTest.htm"));
+    }
+
+    public void seleccionLinkErrorIframe() {
+        getDriver().switchTo().frame(iframesTestObject.getSecondIframe());
+        iframesTestObject.getLinkErrorPage().click();
+        iframesTestObject.getLink404Error().click();
+    }
+
+    public void validarMensajeError() {
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        assertThat(iframesTestObject.getTitleNotFound().getText(), containsText("Not Found"));
+
     }
 }

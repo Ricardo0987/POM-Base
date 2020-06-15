@@ -34,4 +34,27 @@ public class SahiTestDefinition {
     }
 
 
+    @Y("^accedemos al link Error Page del iframe derecho$")
+    public void accedemosAlLinkErrorPageDelIframeDerecho() {
+        sahiTestStep.seleccionLinkErrorIframe();
+    }
+
+    @Entonces("^verifico el mensaje de error$")
+    public void verificoElMensajeDeError() {
+        sahiTestStep.validarMensajeError();
+    }
+
+    @Dado("^que estoy en la pagina de login$")
+    public void queEstoyEnLaPaginaDeLogin() {
+        
+    }
+
+    @Cuando("^ingreso credenciales$")
+    public void ingresoCredenciales() {
+        
+    }
+
+    @Entonces("^verifico ingreso correcto$")
+    public void verificoIngresoCorrecto() {
+    }
 }
