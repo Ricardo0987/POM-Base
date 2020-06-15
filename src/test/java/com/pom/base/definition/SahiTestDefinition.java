@@ -75,4 +75,20 @@ public class SahiTestDefinition {
     public void verificoValorAPagarCorrectao() {
         sahiTestStep.verificoValorProductos();
     }
+
+    @Dado("^que estoy en la pagina jsPopUp$")
+    public void queEstoyEnLaPaginaJsPopUp() {
+        sahiTestStep.abrirPaginaJsPopUp();
+    }
+
+    @Cuando("^navego entre las opciones$")
+    public void navegoEntreLasOpciones() {
+        sahiTestStep.navegarOpciones();
+
+    }
+
+    @Entonces("^regreso a la pagina principal$")
+    public void regresoALaPaginaPrincipal() {
+        sahiTestStep.validarPaginaPrincipal();
+    }
 }

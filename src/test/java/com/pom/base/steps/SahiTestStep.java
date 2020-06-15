@@ -1,9 +1,6 @@
 package com.pom.base.steps;
 
-import com.pom.base.pageobjects.BooksObject;
-import com.pom.base.pageobjects.HomeObject;
-import com.pom.base.pageobjects.IframesTestObject;
-import com.pom.base.pageobjects.LoginObject;
+import com.pom.base.pageobjects.*;
 import net.serenitybdd.core.pages.PageObject;
 
 import java.util.ArrayList;
@@ -18,6 +15,7 @@ public class SahiTestStep extends PageObject {
     private IframesTestObject iframesTestObject;
     private LoginObject loginObject;
     private BooksObject booksObject;
+    private JsPopUpObject jsPopUpObject;
 
 
     public void abrirPaginaPrincipal() {
@@ -92,5 +90,15 @@ public class SahiTestStep extends PageObject {
 
     public void verificoValorProductos() {
         assertTrue(booksObject.getTextResult().getValue().equals("2300"));
+    }
+
+    public void abrirPaginaJsPopUp() {
+        jsPopUpObject.open();
+    }
+
+    public void navegarOpciones() {
+    }
+
+    public void validarPaginaPrincipal() {
     }
 }

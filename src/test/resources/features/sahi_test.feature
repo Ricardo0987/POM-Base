@@ -23,7 +23,13 @@
         Entonces verifico ingreso correcto
 
       @TestCase4
-      Escenario: verificar valor a pagar correctao
+      Escenario: verificar valor a pagar correcto
         Dado que estoy logueado
         Cuando agrego a la canasta los productos
         Entonces verifico valor a pagar correcto
+
+      @TestCase5
+      Escenario: navegacion jsPopUp
+        Dado que estoy en la pagina jsPopUp
+        Cuando navego entre las opciones
+        Entonces regreso a la pagina principal
