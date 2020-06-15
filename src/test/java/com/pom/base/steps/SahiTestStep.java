@@ -1,5 +1,6 @@
 package com.pom.base.steps;
 
+import com.pom.base.pageobjects.BooksObject;
 import com.pom.base.pageobjects.HomeObject;
 import com.pom.base.pageobjects.IframesTestObject;
 import com.pom.base.pageobjects.LoginObject;
@@ -16,6 +17,7 @@ public class SahiTestStep extends PageObject {
     private HomeObject homeObject;
     private IframesTestObject iframesTestObject;
     private LoginObject loginObject;
+    private BooksObject booksObject;
 
 
     public void abrirPaginaPrincipal() {
@@ -36,8 +38,6 @@ public class SahiTestStep extends PageObject {
     }
 
     public void validarAperturaVentana() {
-        //TODO: esperar elemnto
-//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id<locator>));
         try {
             Thread.sleep(2000);
         } catch (InterruptedException e) {
@@ -73,6 +73,24 @@ public class SahiTestStep extends PageObject {
     }
 
     public void verificoLoginCorrecto() {
-        shouldBeVisible(loginObject.getTextWelcome());
+        shouldBeVisible(booksObject.getTextWelcome());
+    }
+
+    public void login() {
+        loginObject.open();
+        loginObject.getTextBoxUsername().sendKeys("test");
+        loginObject.getTextBoxPassword().sendKeys("secret");
+        loginObject.getButtonLogin().click();
+    }
+
+    public void agregarProductos() {
+        booksObject.getBookJava().sendKeys("2");
+        booksObject.getBookRuby().sendKeys("5");
+        booksObject.getBookPython().sendKeys("2");
+        booksObject.getBtnAdd().click();
+    }
+
+    public void verificoValorProductos() {
+        assertTrue(booksObject.getTextResult().getValue().equals("2300"));
     }
 }

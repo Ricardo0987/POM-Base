@@ -17,9 +17,6 @@ public class LoginObject extends PageObject {
     @FindBy(xpath = "//input[@class='button']")
     private WebElementFacade buttonLogin;
 
-    @FindBy(xpath = "//h2[contains(text(),'All available books')]")
-    private WebElementFacade textWelcome;
-
     public WebElementFacade getTextBoxUsername() {
         return textBoxUsername;
     }
@@ -30,9 +27,5 @@ public class LoginObject extends PageObject {
 
     public WebElementFacade getButtonLogin() {
         return buttonLogin;
-    }
-
-    public WebElementFacade getTextWelcome() {
-        return textWelcome;
     }
 }

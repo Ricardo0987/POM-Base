@@ -60,4 +60,19 @@ public class SahiTestDefinition {
         sahiTestStep.verificoLoginCorrecto();
 
     }
+
+    @Dado("^que estoy logueado$")
+    public void queEstoyLogueado() {
+        sahiTestStep.login();
+    }
+
+    @Cuando("^agrego a la canasta los productos$")
+    public void agregoALaCanastaLosProductos() {
+        sahiTestStep.agregarProductos();
+    }
+
+    @Entonces("^verifico valor a pagar correcto$")
+    public void verificoValorAPagarCorrectao() {
+        sahiTestStep.verificoValorProductos();
+    }
 }

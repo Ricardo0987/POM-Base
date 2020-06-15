@@ -21,3 +21,9 @@
         Dado que estoy en la pagina de login
         Cuando ingreso credenciales
         Entonces verifico ingreso correcto
+
+      @TestCase4
+      Escenario: verificar valor a pagar correctao
+        Dado que estoy logueado
+        Cuando agrego a la canasta los productos
+        Entonces verifico valor a pagar correcto

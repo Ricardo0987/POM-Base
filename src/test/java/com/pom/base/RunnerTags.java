@@ -8,7 +8,7 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         features = "src/test/resources/features/sahi_test.feature",
-        tags = "@TestCase3",
+        tags = "@TestCase4",
         snippets = SnippetType.CAMELCASE
 )
 public class RunnerTags {
